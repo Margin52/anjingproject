@@ -1,0 +1,27 @@
+var gulp = require('gulp');
+gulp.task("copy-index",function(){
+	gulp.src("html/*.html")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\twoproject\\html"));
+});
+gulp.task("copy-img",function(){
+	gulp.src("img/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\twoproject\\img"));
+});
+gulp.task("copy-js",function(){
+	gulp.src("js/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\twoproject\\js"));
+})
+gulp.task("copy-css",function(){
+	gulp.src("css/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\twoproject\\css"));
+})
+gulp.task("copy-fontzi",function(){
+	gulp.src("fontzi/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\twoproject\\fontzi"));
+})
+gulp.task("watch",function(){
+	gulp.watch("html/*.html",["copy-index"]);
+	gulp.watch("img/**/*."["copy-img"]);
+	gulp.watch("js/*.js"["copy-js"]);
+	gulp.watch("css/*.css"["copy-css"]);
+})
